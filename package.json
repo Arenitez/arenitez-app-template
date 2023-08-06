@@ -19,7 +19,7 @@
     "fix:prettier": "prettier --write \"**/src/**/*.{js,ts,tsx}\""
   },
   "lint-staged": {
-    "*.{ts,tsx}": "yarn fix"
+    "(*.test).{js,ts,tsx}": "prettier --write"
   },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged",
