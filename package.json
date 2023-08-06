@@ -20,7 +20,8 @@
     "*.{ts,tsx}": "yarn fix"
   },
   "simple-git-hooks": {
-    "pre-commit": "npx lint-staged"
+    "pre-commit": "npx lint-staged",
+    "commit-msg": "npx commitlint --edit ${1}"
   },
   "jest": {
     "preset": "jest-expo"
