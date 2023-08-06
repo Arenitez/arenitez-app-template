@@ -8,7 +8,7 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "test": "jest",
+    "test": "jest --coverage",
     "test:watch": "jest --watchAll",
     "tsc": "tsc --noEmit",
     "lint": "run-s lint:*",
@@ -24,9 +24,6 @@
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged",
     "commit-msg": "npx commitlint --edit ${1}"
-  },
-  "jest": {
-    "preset": "jest-expo"
   },
   "dependencies": {
     "@expo/vector-icons": "^13.0.0",
