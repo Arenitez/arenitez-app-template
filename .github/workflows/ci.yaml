@@ -1,0 +1,47 @@
+name: arenitez-app-template
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: false
+
+      - name: Use Node.js v18
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: 'package.json'
+
+      - name: Cache app dependencies
+        uses: actions/cache@v3
+        id: node_modules_cache_id
+        env:
+          cache-name: arenitez-app-template
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-${{ env.cache-name }}-cache-node-modules-${{ hashFiles('**/yarn.lock') }}
+
+      - name: Install app dependencies
+        if: ${{ steps.node_modules_cache_id.outputs.cache-hit != 'true' }}
+        run: yarn
+
+      - name: ESLint
+        if: always()
+        id: eslint_result
+        run: yarn lint:eslint
+
+      - name: Prettier
+        if: always()
+        id: prettier_result
+        run: yarn lint:prettier
+
+      - name: Test
+        if: always()
+        id: test_result
+        run: yarn test
