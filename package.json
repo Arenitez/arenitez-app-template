@@ -3,15 +3,24 @@
   "main": "expo-router/entry",
   "version": "1.0.0",
   "scripts": {
+    "prepare": "simple-git-hooks",
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
     "test": "jest --watchAll",
-    "fix:lint": "eslint --fix \"**/src/**/*.{js,ts,tsx}\"",
-    "fix:fmt": "prettier --write \"**/src/**/*.{js,ts,tsx}\"",
-    "check:lint": "eslint \"**/src/**/*.{js,ts,tsx}\"",
-    "check:fmt": "prettier --check \"**/src/**/*.{js,ts,tsx}\""
+    "lint": "run-s lint:*",
+    "lint:eslint": "eslint \"**/src/**/*.{js,ts,tsx}\"",
+    "lint:prettier": "prettier --check \"**/src/**/*.{js,ts,tsx}\"",
+    "fix": "run-p fix:*",
+    "fix:eslint": "eslint --fix \"**/src/**/*.{js,ts,tsx}\"",
+    "fix:prettier": "prettier --write \"**/src/**/*.{js,ts,tsx}\""
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": "yarn fix"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged"
   },
   "jest": {
     "preset": "jest-expo"
