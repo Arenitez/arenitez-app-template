@@ -9,6 +9,7 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "test": "jest --watchAll",
+    "tsc": "tsc --noEmit",
     "lint": "run-s lint:*",
     "lint:eslint": "eslint \"**/src/**/*.{js,ts,tsx}\"",
     "lint:prettier": "prettier --check \"**/src/**/*.{js,ts,tsx}\"",
