@@ -44,4 +44,4 @@ jobs:
       - name: Test
         if: always()
         id: test_result
-        run: yarn test
+        run: yarn test:ci
