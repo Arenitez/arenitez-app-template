@@ -49,11 +49,11 @@ const borderPallet = {
 
 const iconPallet = {
   light: {
-    icon1: '#070417',
+    icon1: '#C2C6D2',
     icon2: '#ffffff',
   },
   dark: {
-    icon1: '#ffffff',
+    icon1: '#A1A1AA',
     icon2: '#070417',
   },
 };

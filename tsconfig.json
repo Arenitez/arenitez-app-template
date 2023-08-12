@@ -4,9 +4,10 @@
     "strict": true,
     "baseUrl": "./",
     "paths": {
-      "@/*": [
-        "./*"
-      ]
+      "$components/*": ["./src/components/*"],
+      "$constants/*": ["./src/shared/constants/*"],
+      "$hooks/*": ["./src/shared/hooks/*"],
+      "$libs/*": ["./src/shared/libs/*"]
     }
   },
   "include": ["**/*.ts", "**/*.tsx", ".expo/types/**/*.ts", "expo-env.d.ts"]
