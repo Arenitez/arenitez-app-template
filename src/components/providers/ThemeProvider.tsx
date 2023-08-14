@@ -1,17 +1,12 @@
 import { useAppBootstrap } from '$hooks/useAppBootstrap';
-import {
-  DarkTheme,
-  DefaultTheme,
-  ThemeProvider as NavigationThemeProvider,
-} from '@react-navigation/native';
-import { AreniteThemeProvider } from 'arenite-kit';
-import { ReactNode } from 'react';
+import { AreniteThemeProvider, Toast } from 'arenite-kit';
+import type { ReactNode } from 'react';
 
-type AppProviderProps = {
+type ThemeProviderProps = {
   children: ReactNode;
 };
 
-export const ThemeProvider = ({ children }: AppProviderProps) => {
+export const ThemeProvider = ({ children }: ThemeProviderProps) => {
   const { isReady, areniteTheme } = useAppBootstrap();
 
   if (!isReady) {
@@ -20,11 +15,10 @@ export const ThemeProvider = ({ children }: AppProviderProps) => {
 
   return (
     <AreniteThemeProvider value={areniteTheme}>
-      <NavigationThemeProvider
-        value={areniteTheme.theme === 'dark' ? DarkTheme : DefaultTheme}
-      >
+      <Toast.Provider topOffset={104}>
         {children}
-      </NavigationThemeProvider>
+        <Toast />
+      </Toast.Provider>
     </AreniteThemeProvider>
   );
 };
