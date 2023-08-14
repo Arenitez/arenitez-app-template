@@ -1,6 +1,7 @@
 {
   "build": {
     "development": {
+      "node": "18.17.0",
       "developmentClient": true,
       "channel": "development",
       "distribution": "internal",
@@ -9,10 +10,12 @@
       }
     },
     "staging": {
+      "node": "18.17.0",
       "distribution": "internal",
       "channel": "staging"
     },
     "production": {
+      "node": "18.17.0",
       "channel": "production"
     }
   }
