@@ -1,13 +1,7 @@
 import { ThemingIcon } from '$components/shared/ThemingIcon';
 import { getSafeAreaEdges } from '$libs/react-native-safe-area-context/getSafeAreaEdges';
 import type { RootScreenProps } from '$navigation/navigate';
-import {
-  Button,
-  createAreniteStyle,
-  SafeAreaView,
-  Text,
-  VStack,
-} from 'arenite-kit';
+import { Button, createAreniteStyle, SafeAreaView, Text } from 'arenite-kit';
 
 export const TopScreen = ({ navigation }: RootScreenProps<'TopScreen'>) => {
   const edges = getSafeAreaEdges('horizontal');
@@ -19,17 +13,8 @@ export const TopScreen = ({ navigation }: RootScreenProps<'TopScreen'>) => {
   return (
     <SafeAreaView edges={edges} bg={'bg1'} isCenter style={style.container}>
       <Text color={'color1'} style={style.title}>
-        Arenite-Kit
+        Arenitez Template
       </Text>
-
-      <VStack gap={4}>
-        <Text color={'color1'} style={style.description}>
-          💎 Design system, UI components
-        </Text>
-        <Text color={'color1'} style={style.description}>
-          for React Native.
-        </Text>
-      </VStack>
 
       <Button
         bg={'primary'}
@@ -50,7 +35,7 @@ const style = createAreniteStyle({
     gap: 24,
   },
   title: {
-    fontSize: 36,
+    fontSize: 24,
     fontWeight: 'bold',
     textAlign: 'center',
   },
