@@ -415,8 +415,12 @@ PODS:
   - React-jsinspector (0.72.3)
   - React-logger (0.72.3):
     - glog
-  - react-native-safe-area-context (4.7.1):
+  - react-native-safe-area-context (4.6.3):
+    - RCT-Folly
+    - RCTRequired
+    - RCTTypeSafety
     - React-Core
+    - ReactCommon/turbomodule/core
   - React-NativeModulesApple (0.72.3):
     - hermes-engine
     - React-callinvoker
@@ -527,7 +531,7 @@ PODS:
     - React-jsi (= 0.72.3)
     - React-logger (= 0.72.3)
     - React-perflogger (= 0.72.3)
-  - RNCAsyncStorage (1.19.1):
+  - RNCAsyncStorage (1.18.2):
     - React-Core
   - RNGestureHandler (2.12.1):
     - React-Core
@@ -824,7 +828,7 @@ SPEC CHECKSUMS:
   React-jsiexecutor: 59d1eb03af7d30b7d66589c410f13151271e8006
   React-jsinspector: b511447170f561157547bc0bef3f169663860be7
   React-logger: c5b527272d5f22eaa09bb3c3a690fee8f237ae95
-  react-native-safe-area-context: 9697629f7b2cda43cf52169bb7e0767d330648c2
+  react-native-safe-area-context: 36cc67648134e89465663b8172336a19eeda493d
   React-NativeModulesApple: c57f3efe0df288a6532b726ad2d0322a9bf38472
   React-perflogger: 6bd153e776e6beed54c56b0847e1220a3ff92ba5
   React-RCTActionSheet: c0b62af44e610e69d9a2049a682f5dba4e9dff17
@@ -842,7 +846,7 @@ SPEC CHECKSUMS:
   React-runtimescheduler: 837c1bebd2f84572db17698cd702ceaf585b0d9a
   React-utils: bcb57da67eec2711f8b353f6e3d33bd8e4b2efa3
   ReactCommon: 3ccb8fb14e6b3277e38c73b0ff5e4a1b8db017a9
-  RNCAsyncStorage: f47fe18526970a69c34b548883e1aeceb115e3e1
+  RNCAsyncStorage: ddc4ee162bfd41b0d2c68bf2d95acd81dd7f1f93
   RNGestureHandler: c0d04458598fcb26052494ae23dda8f8f5162b13
   RNReanimated: 9f7068e43b9358a46a688d94a5a3adb258139457
   RNScreens: 50ffe2fa2342eabb2d0afbe19f7c1af286bc7fb3
