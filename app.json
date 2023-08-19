@@ -19,7 +19,8 @@
     "jsEngine": "hermes",
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.arenitez.arenitez-app-template"
+      "bundleIdentifier": "com.arenitez.arenitez-app-template",
+      "runtimeVersion": "1.0.0"
     },
     "android": {
       "adaptiveIcon": {
@@ -41,9 +42,6 @@
       "eas": {
         "projectId": "a411a743-dac5-435f-916c-c4af872a2e59"
       }
-    },
-    "runtimeVersion": {
-      "policy": "appVersion"
     },
     "updates": {
       "url": "https://u.expo.dev/a411a743-dac5-435f-916c-c4af872a2e59"
