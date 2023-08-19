@@ -17,7 +17,7 @@ export const FlatListExample = () => {
           return (
             <Image
               source={require('assets/images/arenitez.png')}
-              style={style.image}
+              style={style.brandLogo}
               width={60}
               height={60}
               bg={'secondary'}
@@ -34,7 +34,7 @@ const style = createAreniteStyle({
     fontWeight: 'bold',
     fontSize: 24,
   },
-  image: {
+  brandLogo: {
     borderRadius: 8,
     marginRight: 8,
   },

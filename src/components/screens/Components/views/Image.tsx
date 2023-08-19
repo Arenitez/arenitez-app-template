@@ -11,7 +11,7 @@ export const ImageExample = () => {
         <Image
           width={200}
           height={200}
-          style={style.image}
+          style={style.brandLogo}
           border={'border2'}
           bg={'white'}
           source={require('assets/images/arenitez.png')}
@@ -26,7 +26,7 @@ const style = createAreniteStyle({
     fontWeight: 'bold',
     fontSize: 24,
   },
-  image: {
+  brandLogo: {
     borderRadius: 8,
     borderWidth: 1,
   },

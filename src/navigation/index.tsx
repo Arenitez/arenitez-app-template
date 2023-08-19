@@ -1,6 +1,7 @@
 import { TopScreen } from '$components/screens/Top/TopScreen';
 import { useNativeTheme } from '$hooks/useNativeTheme';
 import { AppNavigator } from '$navigation/app';
+import { AuthNavigator } from '$navigation/auth';
 import { linkingConfiguration } from '$navigation/linking';
 import type { RootParamList } from '$navigation/navigate';
 import { NavigationContainer } from '@react-navigation/native';
@@ -23,6 +24,11 @@ export const RootNavigator = () => {
           name="AppNavigator"
           component={AppNavigator}
           options={{ headerShown: false }}
+        />
+        <NativeStack.Screen
+          name="AuthNavigator"
+          component={AuthNavigator}
+          options={{ headerShown: false, presentation: 'modal' }}
         />
       </NativeStack.Navigator>
     </NavigationContainer>

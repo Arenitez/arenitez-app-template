@@ -6,7 +6,10 @@ const NativeStack = createNativeStackNavigator<ComponentsNavigatorParamList>();
 
 export const ComponentsNavigator = () => {
   return (
-    <NativeStack.Navigator initialRouteName="ComponentsScreen">
+    <NativeStack.Navigator
+      initialRouteName="ComponentsScreen"
+      screenOptions={{ headerShown: false }}
+    >
       <NativeStack.Screen
         name="ComponentsScreen"
         component={ComponentsScreen}

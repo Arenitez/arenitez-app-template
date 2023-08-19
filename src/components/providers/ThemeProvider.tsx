@@ -1,21 +1,15 @@
-import { useAppBootstrap } from '$hooks/useAppBootstrap';
-import { AreniteThemeProvider, Toast } from 'arenite-kit';
+import { AreniteTheme, AreniteThemeProvider, Toast } from 'arenite-kit';
 import type { ReactNode } from 'react';
 
 type ThemeProviderProps = {
   children: ReactNode;
+  value: AreniteTheme;
 };
 
-export const ThemeProvider = ({ children }: ThemeProviderProps) => {
-  const { isReady, areniteTheme } = useAppBootstrap();
-
-  if (!isReady) {
-    return null;
-  }
-
+export const ThemeProvider = ({ children, value }: ThemeProviderProps) => {
   return (
-    <AreniteThemeProvider value={areniteTheme}>
-      <Toast.Provider topOffset={104}>
+    <AreniteThemeProvider value={value}>
+      <Toast.Provider topOffset={112}>
         {children}
         <Toast />
       </Toast.Provider>

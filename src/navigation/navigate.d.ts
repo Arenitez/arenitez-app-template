@@ -17,10 +17,23 @@ declare global {
 export type RootParamList = {
   TopScreen: undefined;
   AppNavigator: NavigatorScreenParams<AppNavigatorParamList> | undefined;
+  AuthNavigator: NavigatorScreenParams<AuthNavigatorParamList> | undefined;
 };
 
 export type RootScreenProps<T extends keyof RootParamList> =
   NativeStackScreenProps<RootParamList, T>;
+
+/**
+ * Auth
+ */
+export type AuthNavigatorParamList = {
+  SignUpScreen: undefined;
+  SignUpWithEmailScreen: undefined;
+  SignInScreen: undefined;
+};
+
+export type AuthNavigatorProps<T extends keyof AuthNavigatorParamList> =
+  NativeStackScreenProps<AuthNavigatorParamList, T>;
 
 /**
  * App

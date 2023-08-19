@@ -29,7 +29,7 @@ const style = createAreniteStyle({
     fontWeight: 'bold',
     fontSize: 24,
   },
-  image: {
+  brandLogo: {
     borderRadius: 8,
     borderWidth: 1,
   },

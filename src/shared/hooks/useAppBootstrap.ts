@@ -1,5 +1,5 @@
 import { areniteThemeStorageKey } from '$constants/asyncStorageKeys';
-import { myThemePallets } from '$libs/arenite-kit/areniteConfig';
+import { myThemePalettes } from '$libs/arenite-kit/areniteConfig';
 import { asyncStorage } from '$libs/react-native-async-storage/asyncStorage';
 import type { AreniteTheme, AreniteThemeKey } from 'arenite-kit';
 import * as SplashScreen from 'expo-splash-screen';
@@ -8,6 +8,7 @@ import { useEffect, useState } from 'react';
 SplashScreen.preventAutoHideAsync();
 
 export const useAppBootstrap = () => {
+  const [isAuthenticated] = useState(false);
   const [isReady, setIsReady] = useState(false);
   const [userTheme, setUserTheme] = useState<AreniteThemeKey>('auto');
 
@@ -33,10 +34,14 @@ export const useAppBootstrap = () => {
     prepare().then();
   }, []);
 
-  const areniteTheme: AreniteTheme = {
-    theme: userTheme,
-    pallets: myThemePallets,
+  const authValue = {
+    isAuthenticated,
   };
 
-  return { isReady, areniteTheme };
+  const themeValue: AreniteTheme = {
+    theme: userTheme,
+    palettes: myThemePalettes,
+  };
+
+  return { isReady, themeValue, authValue };
 };

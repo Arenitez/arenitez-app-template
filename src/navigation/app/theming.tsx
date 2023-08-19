@@ -6,7 +6,10 @@ const NativeStack = createNativeStackNavigator<ThemingNavigatorParamList>();
 
 export const ThemingNavigator = () => {
   return (
-    <NativeStack.Navigator initialRouteName="ThemingScreen">
+    <NativeStack.Navigator
+      initialRouteName="ThemingScreen"
+      screenOptions={{ headerShown: false }}
+    >
       <NativeStack.Screen
         name="ThemingScreen"
         component={ThemingScreen}
