@@ -3054,10 +3054,10 @@ application-config-path@^0.1.0:
   resolved "https://registry.yarnpkg.com/application-config-path/-/application-config-path-0.1.1.tgz#8b5ac64ff6afdd9bd70ce69f6f64b6998f5f756e"
   integrity sha512-zy9cHePtMP0YhwG+CfHm0bgwdnga2X3gZexpdCwEj//dpb+TKajtiC8REEUJUSq6Ab4f9cgNy2l8ObXzCXFkEw==
 
-arenite-kit@latest:
-  version "0.10.0"
-  resolved "https://registry.yarnpkg.com/arenite-kit/-/arenite-kit-0.10.0.tgz#ead9bca2f7b8e131c8aff2a3091902bf9d2a02e0"
-  integrity sha512-uciWpfJsTSvVH7YDL9QaBQMT+LvwaujgCNp/t19XHW2PLBo8M64BDVLuAKSc/2pNTPEigJmkHzVzB/X8+DkoMw==
+arenite-kit@^0.10.1:
+  version "0.10.1"
+  resolved "https://registry.yarnpkg.com/arenite-kit/-/arenite-kit-0.10.1.tgz#9885b13c6cb25bc7eff8116096f0c0e5ee7de54a"
+  integrity sha512-ujFzlCeKxZp0H7VpvDiiDYE1wixyI2TmBT5zAWKsnQDP+dMdaK5YoMBwxnvPh66XC0l6O+RXO++IkPzkw3V94Q==
 
 arg@4.1.0:
   version "4.1.0"
