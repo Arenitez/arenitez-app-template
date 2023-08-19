@@ -2589,9 +2589,9 @@
   integrity sha512-FGa1F62FT09qcrueBA6qYTrJPVDzah9a+493+o2PCXsesWHIn27G98TsSMs3WPNbZIEj4+VJf6saSFpvD+3Zsw==
 
 "@types/react-native-vector-icons@^6.4.13":
-  version "6.4.13"
-  resolved "https://registry.yarnpkg.com/@types/react-native-vector-icons/-/react-native-vector-icons-6.4.13.tgz#28b34d15094e040718beefb67cb3eff0c4994cb6"
-  integrity sha512-1PqFoKuXTSzMHwGMAr+REdYJBQAbe9xrww3ecZR0FsHcD1K+vGS/rxuAriL4rsI6+p69sZQjDzpEVAbDQcjSwA==
+  version "6.4.14"
+  resolved "https://registry.yarnpkg.com/@types/react-native-vector-icons/-/react-native-vector-icons-6.4.14.tgz#085868a3d73a1db4bd49d6ce308c88b3a39cd96c"
+  integrity sha512-3RaEadfUUImrDed03hwRnYp5QFevcWkWgPUHxj9U9lB6G5uPEGaxXoLWdjgioQ46CvADXUzrDOEYLSVcAn1GQw==
   dependencies:
     "@types/react" "*"
     "@types/react-native" "^0.70"
@@ -3054,10 +3054,10 @@ application-config-path@^0.1.0:
   resolved "https://registry.yarnpkg.com/application-config-path/-/application-config-path-0.1.1.tgz#8b5ac64ff6afdd9bd70ce69f6f64b6998f5f756e"
   integrity sha512-zy9cHePtMP0YhwG+CfHm0bgwdnga2X3gZexpdCwEj//dpb+TKajtiC8REEUJUSq6Ab4f9cgNy2l8ObXzCXFkEw==
 
-arenite-kit@^0.9.0:
-  version "0.9.0"
-  resolved "https://registry.yarnpkg.com/arenite-kit/-/arenite-kit-0.9.0.tgz#7d4e887b5157075c06d2207e17c984c74065bb09"
-  integrity sha512-i85AQiD3PpR8XYWUZRR9ibCSrYyGuUydmuW0IpJzAQk/sRkx2aXyud5k5ZncGJ4TPPtISj8EM93jDsHYowVJvg==
+arenite-kit@latest:
+  version "0.10.0"
+  resolved "https://registry.yarnpkg.com/arenite-kit/-/arenite-kit-0.10.0.tgz#ead9bca2f7b8e131c8aff2a3091902bf9d2a02e0"
+  integrity sha512-uciWpfJsTSvVH7YDL9QaBQMT+LvwaujgCNp/t19XHW2PLBo8M64BDVLuAKSc/2pNTPEigJmkHzVzB/X8+DkoMw==
 
 arg@4.1.0:
   version "4.1.0"

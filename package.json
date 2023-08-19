@@ -44,7 +44,7 @@
     "@react-navigation/bottom-tabs": "^6.5.8",
     "@react-navigation/native": "^6.0.2",
     "@react-navigation/native-stack": "^6.9.13",
-    "arenite-kit": "^0.9.0",
+    "arenite-kit": "latest",
     "expo": "~49.0.5",
     "expo-dev-client": "~2.4.6",
     "expo-font": "~11.4.0",
