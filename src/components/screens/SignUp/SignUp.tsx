@@ -38,7 +38,7 @@ export const SignUpScreen = () => {
   };
 
   return (
-    <SafeAreaView edges={edges} bg={'bg1'}>
+    <SafeAreaView edges={edges} bg={'bg1'} style={style.container}>
       <Box style={style.brandContainer}>
         <Image
           width={120}
@@ -51,7 +51,7 @@ export const SignUpScreen = () => {
         />
       </Box>
 
-      <VStack gap={12} style={style.container}>
+      <VStack gap={12}>
         <Button
           bg={'black'}
           color={'white'}
@@ -101,14 +101,15 @@ export const SignUpScreen = () => {
 };
 
 const style = createAreniteStyle({
+  container: {
+    paddingTop: 40,
+    paddingHorizontal: 16,
+  },
   brandContainer: {
     alignSelf: 'center',
-    paddingVertical: 40,
+    paddingBottom: 40,
   },
   brandLogo: {
     borderRadius: 8,
-  },
-  container: {
-    paddingHorizontal: 16,
   },
 });

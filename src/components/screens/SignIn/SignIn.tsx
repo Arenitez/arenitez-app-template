@@ -1,4 +1,5 @@
 import { useAuth } from '$components/providers/AuthProvider';
+import { SignForm, SignFormValue } from '$components/shared/form/SignForm';
 import { ThemingIcon } from '$components/shared/ThemingIcon';
 import { getSafeAreaEdges } from '$libs/react-native-safe-area-context/getSafeAreaEdges';
 import { RootParamList } from '$navigation/navigate';
@@ -9,8 +10,6 @@ import {
   createAreniteStyle,
   Divider,
   SafeAreaView,
-  Text,
-  TextInput,
   VStack,
 } from 'arenite-kit';
 
@@ -29,14 +28,14 @@ export const SignInScreen = () => {
     navigation.navigate('AppNavigator');
   };
 
-  const onPressSignInButton = () => {
+  const onPressSignInButton = (_formValues: SignFormValue) => {
     signIn();
     navigation.navigate('AppNavigator');
   };
 
   return (
-    <SafeAreaView edges={edges} bg={'bg1'}>
-      <VStack gap={12} style={style.container}>
+    <SafeAreaView edges={edges} bg={'bg1'} style={style.container}>
+      <VStack gap={12}>
         <Button
           bg={'black'}
           color={'white'}
@@ -58,31 +57,7 @@ export const SignInScreen = () => {
 
         <Divider label={'or'} color={'color1'} border={'border1'} />
 
-        <Text style={style.label} color={'color1'}>
-          Email
-        </Text>
-        <TextInput
-          placeholder={'Type your email'}
-          bg={'bg2'}
-          color={'color1'}
-          selectionColor={'primary'}
-          placeholderTextColor={'color2'}
-        />
-
-        <Text style={style.label} color={'color1'}>
-          Password
-        </Text>
-        <TextInput
-          placeholder={'Type your password'}
-          bg={'bg2'}
-          color={'color1'}
-          selectionColor={'primary'}
-          placeholderTextColor={'color2'}
-        />
-
-        <Button bg={'primary'} color={'white'} onPress={onPressSignInButton}>
-          Sign up
-        </Button>
+        <SignForm formType={'sign-in'} onSubmit={onPressSignInButton} />
       </VStack>
     </SafeAreaView>
   );
@@ -90,13 +65,10 @@ export const SignInScreen = () => {
 
 const style = createAreniteStyle({
   container: {
-    paddingVertical: 40,
+    paddingTop: 40,
     paddingHorizontal: 16,
   },
   divider: {
-    marginVertical: 16,
-  },
-  label: {
-    fontSize: 18,
+    marginVertical: 20,
   },
 });
