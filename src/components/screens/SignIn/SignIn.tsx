@@ -39,7 +39,7 @@ export const SignInScreen = () => {
         <Button
           bg={'black'}
           color={'white'}
-          left={<ThemingIcon name={'logo-apple'} size={18} icon={'white'} />}
+          left={<ThemingIcon name={'logo-apple'} size={20} icon={'white'} />}
           onPress={onPressSignInWithAppleButton}
         >
           Sign in with Apple
@@ -49,7 +49,7 @@ export const SignInScreen = () => {
           bg={'white'}
           color={'black'}
           border={'border1'}
-          left={<ThemingIcon name={'logo-google'} size={18} icon={'black'} />}
+          left={<ThemingIcon name={'logo-google'} size={20} icon={'black'} />}
           onPress={onPressSignInWithGoogleButton}
         >
           Sign in with Google

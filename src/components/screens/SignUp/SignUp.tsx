@@ -55,7 +55,7 @@ export const SignUpScreen = () => {
         <Button
           bg={'black'}
           color={'white'}
-          left={<ThemingIcon name={'logo-apple'} size={18} icon={'white'} />}
+          left={<ThemingIcon name={'logo-apple'} size={20} icon={'white'} />}
           onPress={onPressContinueWithAppleButton}
         >
           Continue with Apple
@@ -65,7 +65,7 @@ export const SignUpScreen = () => {
           bg={'white'}
           color={'black'}
           border={'border1'}
-          left={<ThemingIcon name={'logo-google'} size={18} icon={'black'} />}
+          left={<ThemingIcon name={'logo-google'} size={20} icon={'black'} />}
           onPress={onPressContinueWithGoogleButton}
         >
           Continue with Google
@@ -74,7 +74,7 @@ export const SignUpScreen = () => {
         <Button
           bg={'secondary'}
           color={'white'}
-          left={<ThemingIcon name={'mail'} size={18} icon={'white'} />}
+          left={<ThemingIcon name={'mail'} size={20} icon={'white'} />}
           onPress={onPressSignUpWithEmailButton}
         >
           Sign up with Email
@@ -87,7 +87,7 @@ export const SignUpScreen = () => {
           left={
             <ThemingIcon
               name={'arrow-up-circle-outline'}
-              size={18}
+              size={20}
               icon={'icon1'}
             />
           }
