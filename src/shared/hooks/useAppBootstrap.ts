@@ -1,9 +1,10 @@
-import { areniteThemeStorageKey } from '$constants/asyncStorageKeys';
-import { myThemePalettes } from '$libs/arenite-kit/areniteConfig';
-import { asyncStorage } from '$libs/react-native-async-storage/asyncStorage';
 import type { AreniteTheme, AreniteThemeKey } from 'arenite-kit';
 import * as SplashScreen from 'expo-splash-screen';
 import { useEffect, useState } from 'react';
+
+import { areniteThemeStorageKey } from '$constants/asyncStorageKeys';
+import { myThemePalettes } from '$libs/arenite-kit/areniteConfig';
+import { asyncStorage } from '$libs/react-native-async-storage/asyncStorage';
 
 SplashScreen.preventAutoHideAsync();
 

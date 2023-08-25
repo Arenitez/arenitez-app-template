@@ -1,10 +1,11 @@
+import { useNavigation } from '@react-navigation/core';
+import { NavigationProp } from '@react-navigation/core/src/types';
+import { createAreniteStyle, SafeAreaView } from 'arenite-kit';
+
 import { useAuth } from '$components/providers/AuthProvider';
 import { SignForm, SignFormValue } from '$components/shared/form/SignForm';
 import { getSafeAreaEdges } from '$libs/react-native-safe-area-context/getSafeAreaEdges';
 import { RootParamList } from '$navigation/navigate';
-import { useNavigation } from '@react-navigation/core';
-import { NavigationProp } from '@react-navigation/core/src/types';
-import { createAreniteStyle, SafeAreaView } from 'arenite-kit';
 
 export const SignInWithEmailScreen = () => {
   const { signIn } = useAuth();

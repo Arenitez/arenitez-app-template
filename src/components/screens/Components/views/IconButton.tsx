@@ -1,4 +1,3 @@
-import { ThemingIcon } from '$components/shared/ThemingIcon';
 import {
   createAreniteStyle,
   HStack,
@@ -6,6 +5,8 @@ import {
   Text,
   VStack,
 } from 'arenite-kit';
+
+import { ThemingIcon } from '$components/shared/ThemingIcon';
 
 export const IconButtonExample = () => {
   const onPress = () => {

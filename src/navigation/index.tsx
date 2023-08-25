@@ -1,11 +1,12 @@
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
 import { TopScreen } from '$components/screens/Top/TopScreen';
 import { useNativeTheme } from '$hooks/useNativeTheme';
 import { AppNavigator } from '$navigation/app';
 import { AuthNavigator } from '$navigation/auth';
 import { linkingConfiguration } from '$navigation/linking';
 import type { RootParamList } from '$navigation/navigate';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 const NativeStack = createNativeStackNavigator<RootParamList>();
 

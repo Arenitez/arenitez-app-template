@@ -1,8 +1,9 @@
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
 import { SignInScreen } from '$components/screens/SignIn/SignIn';
 import { SignInWithEmailScreen } from '$components/screens/SignInWithEmail/SignInWithEmail';
 import { SignUpScreen } from '$components/screens/SignUp/SignUp';
 import { AuthNavigatorParamList } from '$navigation/navigate';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 const NativeStack = createNativeStackNavigator<AuthNavigatorParamList>();
 

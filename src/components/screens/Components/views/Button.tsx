@@ -1,5 +1,3 @@
-import { areniteThemeStorageKey } from '$constants/asyncStorageKeys';
-import { asyncStorage } from '$libs/react-native-async-storage/asyncStorage';
 import {
   Button,
   createAreniteStyle,
@@ -8,6 +6,9 @@ import {
   useAreniteTheme,
   VStack,
 } from 'arenite-kit';
+
+import { areniteThemeStorageKey } from '$constants/asyncStorageKeys';
+import { asyncStorage } from '$libs/react-native-async-storage/asyncStorage';
 
 export const ButtonExample = () => {
   const [{ theme }, { setTheme }] = useAreniteTheme();

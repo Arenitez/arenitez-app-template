@@ -1,8 +1,3 @@
-import { useAuth } from '$components/providers/AuthProvider';
-import { SignForm, SignFormValue } from '$components/shared/form/SignForm';
-import { ThemingIcon } from '$components/shared/ThemingIcon';
-import { getSafeAreaEdges } from '$libs/react-native-safe-area-context/getSafeAreaEdges';
-import { RootParamList } from '$navigation/navigate';
 import { useNavigation } from '@react-navigation/core';
 import { NavigationProp } from '@react-navigation/core/src/types';
 import {
@@ -12,6 +7,12 @@ import {
   SafeAreaView,
   VStack,
 } from 'arenite-kit';
+
+import { useAuth } from '$components/providers/AuthProvider';
+import { SignForm, SignFormValue } from '$components/shared/form/SignForm';
+import { ThemingIcon } from '$components/shared/ThemingIcon';
+import { getSafeAreaEdges } from '$libs/react-native-safe-area-context/getSafeAreaEdges';
+import { RootParamList } from '$navigation/navigate';
 
 export const SignInScreen = () => {
   const { signIn } = useAuth();

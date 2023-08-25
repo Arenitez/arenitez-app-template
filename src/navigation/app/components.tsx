@@ -1,6 +1,7 @@
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
 import { ComponentsScreen } from '$components/screens/Components/ComponentsScreen';
 import type { ComponentsNavigatorParamList } from '$navigation/navigate';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 const NativeStack = createNativeStackNavigator<ComponentsNavigatorParamList>();
 

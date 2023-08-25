@@ -1,3 +1,10 @@
+import {
+  createAreniteStyle,
+  SafeAreaView,
+  ScrollView,
+  VStack,
+} from 'arenite-kit';
+
 import { ActivityIndicatorExample } from '$components/screens/Components/views/ActivityIndicator';
 import { ButtonExample } from '$components/screens/Components/views/Button';
 import { ButtonGroupExample } from '$components/screens/Components/views/ButtonGroup';
@@ -12,12 +19,6 @@ import { TextInputExample } from '$components/screens/Components/views/TextInput
 import { ToastExample } from '$components/screens/Components/views/Toast';
 import { VStackExample } from '$components/screens/Components/views/Vstack';
 import { getSafeAreaEdges } from '$libs/react-native-safe-area-context/getSafeAreaEdges';
-import {
-  createAreniteStyle,
-  SafeAreaView,
-  ScrollView,
-  VStack,
-} from 'arenite-kit';
 
 export const ComponentsScreen = () => {
   const edges = getSafeAreaEdges('horizontal');

@@ -1,6 +1,7 @@
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
 import { ThemingScreen } from '$components/screens/Theming/ThemingScreen';
 import type { ThemingNavigatorParamList } from '$navigation/navigate';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 const NativeStack = createNativeStackNavigator<ThemingNavigatorParamList>();
 

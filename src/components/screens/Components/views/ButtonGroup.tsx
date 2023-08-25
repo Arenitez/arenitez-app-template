@@ -1,5 +1,3 @@
-import { areniteThemeStorageKey } from '$constants/asyncStorageKeys';
-import { asyncStorage } from '$libs/react-native-async-storage/asyncStorage';
 import {
   AreniteThemeKey,
   ButtonGroup,
@@ -9,6 +7,9 @@ import {
   VStack,
 } from 'arenite-kit';
 import { useState } from 'react';
+
+import { areniteThemeStorageKey } from '$constants/asyncStorageKeys';
+import { asyncStorage } from '$libs/react-native-async-storage/asyncStorage';
 
 type Position = 'left' | 'center' | 'right';
 

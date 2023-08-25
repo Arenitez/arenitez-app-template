@@ -1,14 +1,15 @@
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { useNavigation } from '@react-navigation/core';
+import { NavigationProp } from '@react-navigation/core/src/types';
+import { IconButton } from 'arenite-kit';
+import { Alert } from 'react-native';
+
 import { useAuth } from '$components/providers/AuthProvider';
 import { ThemingIcon } from '$components/shared/ThemingIcon';
 import { ComponentsNavigator } from '$navigation/app/components';
 import { ThemingNavigator } from '$navigation/app/theming';
 import type { AppNavigatorParamList } from '$navigation/navigate';
 import { RootParamList } from '$navigation/navigate';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { useNavigation } from '@react-navigation/core';
-import { NavigationProp } from '@react-navigation/core/src/types';
-import { IconButton } from 'arenite-kit';
-import { Alert } from 'react-native';
 
 const BottomTab = createBottomTabNavigator<AppNavigatorParamList>();
 
