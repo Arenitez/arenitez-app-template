@@ -7,8 +7,12 @@ module.exports = {
     '@react-native-community',
     'prettier',
   ],
-  plugins: ['@typescript-eslint'],
+  plugins: ['@typescript-eslint', 'simple-import-sort'],
   parser: '@typescript-eslint/parser',
+  rules: {
+    'simple-import-sort/imports': 'error',
+    'simple-import-sort/exports': 'error',
+  },
   overrides: [
     {
       files: ['*.ts', '*.tsx'],
