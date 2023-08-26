@@ -35,8 +35,7 @@
     },
     "plugins": [],
     "experiments": {
-      "tsconfigPaths": true,
-      "typedRoutes": true
+      "tsconfigPaths": true
     },
     "extra": {
       "eas": {
