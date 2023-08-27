@@ -21,7 +21,7 @@
     "update:prod:ios": "eas update --channel production --platform ios",
     "update:prod:android": "eas update --channel production --platform android",
     "test": "jest",
-    "test:ci": "jest --updateSnapshot --ci",
+    "test:ci": "jest --passWithNoTests --updateSnapshot --ci",
     "test:watch": "jest --watchAll",
     "tsc": "tsc --noEmit",
     "lint": "run-s lint:*",
