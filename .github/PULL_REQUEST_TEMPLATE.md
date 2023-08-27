@@ -1,9 +1,3 @@
-- - - -
-name: Pull Request Template
-about: DefaultTemplate
-title: [feature|fix|refactor|docs|chore|test|release] title
-- - - -
-
 ## Overview
 
 ## Reference
