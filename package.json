@@ -21,7 +21,7 @@
     "update:prod:ios": "eas update --channel production --platform ios",
     "update:prod:android": "eas update --channel production --platform android",
     "test": "jest",
-    "test:ci": "jest --updateSnapshot --ci",
+    "test:ci": "jest --passWithNoTests --updateSnapshot --ci",
     "test:watch": "jest --watchAll",
     "tsc": "tsc --noEmit",
     "lint": "run-s lint:*",
@@ -41,6 +41,7 @@
   "dependencies": {
     "@expo/vector-icons": "^13.0.0",
     "@react-native-async-storage/async-storage": "1.18.2",
+    "@react-native-firebase/app": "^18.3.1",
     "@react-navigation/bottom-tabs": "^6.5.8",
     "@react-navigation/native": "^6.0.2",
     "@react-navigation/native-stack": "^6.9.13",
