@@ -1,11 +1,13 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { useNavigation } from '@react-navigation/core';
 import { NavigationProp } from '@react-navigation/core/src/types';
-import { IconButton } from 'arenite-kit';
+import { IconButton, useToast } from 'arenite-kit';
 import { Alert } from 'react-native';
 
 import { useAuth } from '$components/providers/AuthProvider';
 import { ThemingIcon } from '$components/shared/ThemingIcon';
+import { ToastId } from '$libs/arenite-kit/toastId';
+import { firebaseAuth } from '$libs/firebase/auth';
 import { ComponentsNavigator } from '$navigation/app/components';
 import { ThemingNavigator } from '$navigation/app/theming';
 import type { AppNavigatorParamList } from '$navigation/navigate';
@@ -56,8 +58,11 @@ export const AppNavigator = () => {
   );
 };
 
+const { signOut: firebaseSignOut } = firebaseAuth;
+
 const SignInStatusIconButton = () => {
   const { isAuthenticated, signOut } = useAuth();
+  const toast = useToast();
   const navigation = useNavigation<NavigationProp<RootParamList>>();
 
   const onPressNavigateAuth = () => {
@@ -68,7 +73,27 @@ const SignInStatusIconButton = () => {
 
     Alert.alert('Sign Out', 'Are you sure?', [
       { text: 'Cancel', style: 'cancel' },
-      { text: 'OK', style: 'default', onPress: () => signOut() },
+      {
+        text: 'OK',
+        style: 'default',
+        onPress: async () => {
+          try {
+            await firebaseSignOut();
+            signOut();
+            toast.addToast({
+              id: ToastId.SignOutSuccess,
+              type: 'success',
+              message: 'サインアウトしました',
+            });
+          } catch {
+            toast.addToast({
+              id: ToastId.SignOutError,
+              type: 'error',
+              message: 'サインアウトに失敗しました',
+            });
+          }
+        },
+      },
     ]);
   };
 

@@ -3,4 +3,6 @@ export const ToastId = {
   SignInEmailError: 'SIGN_IN_EMAIL_ERROR',
   SignUpEmailSuccess: 'SIGN_UP_EMAIL_SUCCESS',
   SignUpEmailError: 'SIGN_UP_EMAIL_ERROR',
+  SignOutSuccess: 'SIGN_OUT_SUCCESS',
+  SignOutError: 'SIGN_OUT_ERROR',
 } as const;

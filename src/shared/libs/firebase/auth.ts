@@ -64,8 +64,13 @@ const signInWithEmail = async (values: {
   return await auth().signInWithEmailAndPassword(values.email, values.password);
 };
 
+const signOut = async (): Promise<void> => {
+  return await auth().signOut();
+};
+
 export const firebaseAuth = {
   signInWithEmail,
   signUpWithEmail,
+  signOut,
   catchFirebaseAuthError,
 };
