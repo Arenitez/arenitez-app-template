@@ -9,24 +9,20 @@ import {
   VStack,
 } from 'arenite-kit';
 
-import { useAuth } from '$components/providers/AuthProvider';
 import { ThemingIcon } from '$components/shared/ThemingIcon';
 import { getSafeAreaEdges } from '$libs/react-native-safe-area-context/getSafeAreaEdges';
 import { AuthNavigatorParamList, RootParamList } from '$navigation/navigate';
 
 export const SignUpScreen = () => {
-  const { signIn } = useAuth();
   const navigation =
     useNavigation<NavigationProp<RootParamList & AuthNavigatorParamList>>();
   const edges = getSafeAreaEdges('horizontal');
 
   const onPressContinueWithAppleButton = () => {
-    signIn();
     navigation.navigate('AppNavigator');
   };
 
   const onPressContinueWithGoogleButton = () => {
-    signIn();
     navigation.navigate('AppNavigator');
   };
 

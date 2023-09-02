@@ -5,33 +5,53 @@ import {
   createAreniteStyle,
   Divider,
   SafeAreaView,
+  useToast,
   VStack,
 } from 'arenite-kit';
 
 import { useAuth } from '$components/providers/AuthProvider';
 import { SignForm, SignFormValue } from '$components/shared/form/SignForm';
 import { ThemingIcon } from '$components/shared/ThemingIcon';
+import { ToastId } from '$libs/arenite-kit/toastId';
+import { firebaseAuth } from '$libs/firebase/auth';
 import { getSafeAreaEdges } from '$libs/react-native-safe-area-context/getSafeAreaEdges';
 import { RootParamList } from '$navigation/navigate';
 
+const { signInWithEmail, catchFirebaseAuthError } = firebaseAuth;
+
 export const SignInScreen = () => {
   const { signIn } = useAuth();
+  const toast = useToast();
   const navigation = useNavigation<NavigationProp<RootParamList>>();
   const edges = getSafeAreaEdges('horizontal');
 
   const onPressSignInWithAppleButton = () => {
-    signIn();
     navigation.navigate('AppNavigator');
   };
 
   const onPressSignInWithGoogleButton = () => {
-    signIn();
     navigation.navigate('AppNavigator');
   };
 
-  const onPressSignInButton = (_formValues: SignFormValue) => {
-    signIn();
-    navigation.navigate('AppNavigator');
+  const onPressSignInButton = async (formValues: SignFormValue) => {
+    try {
+      const result = await signInWithEmail(formValues);
+      signIn(result.user);
+
+      navigation.navigate('AppNavigator');
+      toast.addToast({
+        id: ToastId.SignInEmailSuccess,
+        type: 'success',
+        message: 'サインインに成功しました',
+      });
+    } catch (error) {
+      const errorMessage = catchFirebaseAuthError(error);
+      toast.addToast({
+        id: ToastId.SignInEmailError,
+        type: 'error',
+        message: errorMessage,
+      });
+    }
   };
 
   return (
