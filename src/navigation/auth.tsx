@@ -1,8 +1,8 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import { SignInScreen } from '$components/screens/SignIn/SignIn';
-import { SignInWithEmailScreen } from '$components/screens/SignInWithEmail/SignInWithEmail';
 import { SignUpScreen } from '$components/screens/SignUp/SignUp';
+import { SignUpWithEmailScreen } from '$components/screens/SignUpWithEmail/SignUpWithEmail';
 import { AuthNavigatorParamList } from '$navigation/navigate';
 
 const NativeStack = createNativeStackNavigator<AuthNavigatorParamList>();
@@ -17,7 +17,7 @@ export const AuthNavigator = () => {
       />
       <NativeStack.Screen
         name="SignUpWithEmailScreen"
-        component={SignInWithEmailScreen}
+        component={SignUpWithEmailScreen}
         options={{ title: 'Sign up with Email' }}
       />
       <NativeStack.Screen

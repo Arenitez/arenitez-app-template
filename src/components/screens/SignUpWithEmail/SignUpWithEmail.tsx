@@ -7,7 +7,7 @@ import { SignForm, SignFormValue } from '$components/shared/form/SignForm';
 import { getSafeAreaEdges } from '$libs/react-native-safe-area-context/getSafeAreaEdges';
 import { RootParamList } from '$navigation/navigate';
 
-export const SignInWithEmailScreen = () => {
+export const SignUpWithEmailScreen = () => {
   const { signIn } = useAuth();
   const navigation = useNavigation<NavigationProp<RootParamList>>();
   const edges = getSafeAreaEdges('horizontal');
