@@ -1,18 +1,21 @@
 import { Button, createAreniteStyle, SafeAreaView, Text } from 'arenite-kit';
 
 import { ThemingIcon } from '$components/shared/ThemingIcon';
-import { getSafeAreaEdges } from '$libs/react-native-safe-area-context/getSafeAreaEdges';
+import { SafeAreaEdge } from '$libs/react-native-safe-area-context/safeAreaEdge';
 import type { RootScreenProps } from '$navigation/navigate';
 
 export const TopScreen = ({ navigation }: RootScreenProps<'TopScreen'>) => {
-  const edges = getSafeAreaEdges('horizontal');
-
   const onPressNavigateApp = () => {
     navigation.navigate('AppNavigator');
   };
 
   return (
-    <SafeAreaView edges={edges} bg={'bg1'} isCenter style={style.container}>
+    <SafeAreaView
+      edges={SafeAreaEdge.Horizontal}
+      bg={'bg1'}
+      isCenter
+      style={style.container}
+    >
       <Text color={'color1'} style={style.title}>
         Arenitez Template
       </Text>

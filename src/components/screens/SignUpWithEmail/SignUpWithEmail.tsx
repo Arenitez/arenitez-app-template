@@ -6,7 +6,7 @@ import { useAuth } from '$components/providers/AuthProvider';
 import { SignForm, SignFormValue } from '$components/shared/form/SignForm';
 import { ToastId } from '$libs/arenite-kit/toastId';
 import { firebaseAuth } from '$libs/firebase/auth';
-import { getSafeAreaEdges } from '$libs/react-native-safe-area-context/getSafeAreaEdges';
+import { SafeAreaEdge } from '$libs/react-native-safe-area-context/safeAreaEdge';
 import { RootParamList } from '$navigation/navigate';
 
 const { signUpWithEmail, catchFirebaseAuthError } = firebaseAuth;
@@ -15,7 +15,6 @@ export const SignUpWithEmailScreen = () => {
   const { signIn } = useAuth();
   const toast = useToast();
   const navigation = useNavigation<NavigationProp<RootParamList>>();
-  const edges = getSafeAreaEdges('horizontal');
 
   const onPressSignUpButton = async (values: SignFormValue) => {
     try {
@@ -39,7 +38,11 @@ export const SignUpWithEmailScreen = () => {
   };
 
   return (
-    <SafeAreaView style={style.container} edges={edges} bg={'bg1'}>
+    <SafeAreaView
+      style={style.container}
+      edges={SafeAreaEdge.Horizontal}
+      bg={'bg1'}
+    >
       <SignForm formType={'sign-up'} onSubmit={onPressSignUpButton} />
     </SafeAreaView>
   );

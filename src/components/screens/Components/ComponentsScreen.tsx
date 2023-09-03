@@ -18,13 +18,11 @@ import { TextExample } from '$components/screens/Components/views/Text';
 import { TextInputExample } from '$components/screens/Components/views/TextInput';
 import { ToastExample } from '$components/screens/Components/views/Toast';
 import { VStackExample } from '$components/screens/Components/views/Vstack';
-import { getSafeAreaEdges } from '$libs/react-native-safe-area-context/getSafeAreaEdges';
+import { SafeAreaEdge } from '$libs/react-native-safe-area-context/safeAreaEdge';
 
 export const ComponentsScreen = () => {
-  const edges = getSafeAreaEdges('horizontal');
-
   return (
-    <SafeAreaView edges={edges} bg={'bg1'}>
+    <SafeAreaView edges={SafeAreaEdge.Horizontal} bg={'bg1'}>
       <ScrollView>
         <VStack gap={32} style={style.container}>
           <TextExample />

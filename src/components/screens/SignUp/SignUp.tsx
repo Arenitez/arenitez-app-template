@@ -10,13 +10,12 @@ import {
 } from 'arenite-kit';
 
 import { ThemingIcon } from '$components/shared/ThemingIcon';
-import { getSafeAreaEdges } from '$libs/react-native-safe-area-context/getSafeAreaEdges';
+import { SafeAreaEdge } from '$libs/react-native-safe-area-context/safeAreaEdge';
 import { AuthNavigatorParamList, RootParamList } from '$navigation/navigate';
 
 export const SignUpScreen = () => {
   const navigation =
     useNavigation<NavigationProp<RootParamList & AuthNavigatorParamList>>();
-  const edges = getSafeAreaEdges('horizontal');
 
   const onPressContinueWithAppleButton = () => {
     navigation.navigate('AppNavigator');
@@ -35,7 +34,11 @@ export const SignUpScreen = () => {
   };
 
   return (
-    <SafeAreaView edges={edges} bg={'bg1'} style={style.container}>
+    <SafeAreaView
+      edges={SafeAreaEdge.Horizontal}
+      bg={'bg1'}
+      style={style.container}
+    >
       <Box style={style.brandContainer}>
         <Image
           width={120}

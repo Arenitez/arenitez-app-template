@@ -14,7 +14,7 @@ import { SignForm, SignFormValue } from '$components/shared/form/SignForm';
 import { ThemingIcon } from '$components/shared/ThemingIcon';
 import { ToastId } from '$libs/arenite-kit/toastId';
 import { firebaseAuth } from '$libs/firebase/auth';
-import { getSafeAreaEdges } from '$libs/react-native-safe-area-context/getSafeAreaEdges';
+import { SafeAreaEdge } from '$libs/react-native-safe-area-context/safeAreaEdge';
 import { RootParamList } from '$navigation/navigate';
 
 const { signInWithEmail, catchFirebaseAuthError } = firebaseAuth;
@@ -23,7 +23,6 @@ export const SignInScreen = () => {
   const { signIn } = useAuth();
   const toast = useToast();
   const navigation = useNavigation<NavigationProp<RootParamList>>();
-  const edges = getSafeAreaEdges('horizontal');
 
   const onPressSignInWithAppleButton = () => {
     navigation.navigate('AppNavigator');
@@ -55,7 +54,11 @@ export const SignInScreen = () => {
   };
 
   return (
-    <SafeAreaView edges={edges} bg={'bg1'} style={style.container}>
+    <SafeAreaView
+      edges={SafeAreaEdge.Horizontal}
+      bg={'bg1'}
+      style={style.container}
+    >
       <VStack gap={12}>
         <Button
           bg={'black'}
