@@ -13,7 +13,9 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "jsEngine": "hermes",
     "ios": {
       "supportsTablet": true,
@@ -43,6 +45,7 @@
     },
     "updates": {
       "url": "https://u.expo.dev/a411a743-dac5-435f-916c-c4af872a2e59"
-    }
+    },
+    "runtimeVersion": "1.0.0"
   }
 }
